@@ -9,24 +9,25 @@ DZ1-2
 
 */
 
-function numbersFibonacci($number)
+function numbersFibonacci($count)
 {
-    if ($number < 3) 
-    {
-        return 1;
-    } 
-    else 
-    {
-        return numbersFibonacci($number - 1) + numbersFibonacci($number - 2);
-    }
-}
+   if ($count > 0){
+       $firstNumberFibo = 0;
+       $secondNumberFibo = 1;
 
-$amount_numbers = 13;
+       $numbersFibo = [$firstNumberFibo, $secondNumberFibo];
 
-echo "числа фибоначчи: ";
-for ($number = 1; $number <= $amount_numbers; $number++) 
-{
-    echo(numbersFibonacci($number) . ", ");
+       if ($count = 1){
+           return $firstNumberFibo;
+       }elseif ($count = 2){
+           return implode(' , ', $numbersFibo[]);
+       }else {
+           for ($i = 1; i <= $count; $i++){
+               $numbersFibo[] = $numbersFibo[$i] + $numbersFibo[--$i];
+           }
+           return $numbersFibo[] = implode(' , ', $numbersFibo[]);
+       }
+   }
 }
 
 
