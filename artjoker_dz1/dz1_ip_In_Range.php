@@ -12,12 +12,9 @@ DZ1-4
 
 function ipInRange($ip, $ipStart, $ipEnd)
 {
-
-    if (ip2long($ip)>=ip2long($ipStart) && ip2long($ip)<=ip2long($ipEnd)) {
+    if (ip2long($ip) >= ip2long($ipStart) && ip2long($ip) <= ip2long($ipEnd)) {
         echo "in range";
-    }
-    else 
-    {
+    } else {
         echo "not in range";
     }
 }

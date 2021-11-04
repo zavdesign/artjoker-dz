@@ -11,8 +11,7 @@ DZ1-3
 function exponentionNumberToDegree($number, $degree)
 {
     $exponent = 1;
-    for ($i = 1; $i <= $degree; $i++) 
-    {
+    for ($i = 1; $i <= $degree; $i++) {
         $exponent *= $number;
     }
     return $exponent;
