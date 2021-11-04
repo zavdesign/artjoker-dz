@@ -15,7 +15,7 @@ function exponentionNumberToDegree($number, $degree)
     {
         $exponent *= $number;
     }
-    return "Число $number в {$degree}-ой степени: " . (int)$exponent;
+    return $exponent;
 }
 
 echo exponentionNumberToDegree(13, 7);

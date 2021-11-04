@@ -47,7 +47,6 @@ function conversionDecimal($binaryNumber)
     else 
     {
         echo 'variable not declared';
-        exit;
     }
     return $i;
 }

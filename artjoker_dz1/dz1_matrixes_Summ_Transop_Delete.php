@@ -19,12 +19,12 @@ $matrix1 = [];
     $column = 5;
     $minNumber = -1;
     $maxNumber = 1;
-for ($c = 0; $c < $column; $c++)
+for ($i = 0; $i < $column; $i++)
 {
-    for ($r = 0; $r < $row; $r++)
+    for ($j = 0; $j < $row; $j++)
     {
-        $matrix1[$c][$r] = rand($minNumber, $maxNumber);
-        echo $matrix1[$c][$r] . " ";
+        $matrix1[$i][$j] = rand($minNumber, $maxNumber);
+        echo $matrix1[$i][$j] . " ";
     }
     echo "<br>";
 }
@@ -37,12 +37,12 @@ $matrix2 = []);
     $column = 5;
     $minNumber = -2;
     $maxNumber = 2;
-for ($c = 0; $c < $column; $c++)
+for ($i = 0; $i < $column; $i++)
 {   
-    for ($r = 0; $r < $row; $r++)
+    for ($r = 0; $j < $row; $j++)
     {
-        $matrix2[$c][$r] = rand($minNumber, $maxNumber);
-        echo $matrix2[$c][$r] . " ";
+        $matrix2[$i][$j] = rand($minNumber, $maxNumber);
+        echo $matrix2[$i][$j] . " ";
     }
     echo "<br>";
 }
@@ -51,14 +51,14 @@ for ($c = 0; $c < $column; $c++)
 echo "<h3>Summa Matrix </h3>";
 
 $SummMatrix = [];
-for($c = 0; $c < $column; $c++)
+for($i = 0; $i < $column; $i++)
 {
     $sumrow = 0;
-    for($r = 0; $r < $row; $r++)
+    for($j = 0; $j < $row; $j++)
     {
-        $SummMatrix[$c][$r] = $matrix1[$c][$r] + $matrix2[$c][$r];
-        echo $SummMatrix[$c][$r] . " ";
-        $sumrow += $matrix1[$c][$r];
+        $SummMatrix[$i][$j] = $matrix1[$i][$j] + $matrix2[$i][$j];
+        echo $SummMatrix[$i][$j] . " ";
+        $sumrow += $matrix1[$i][$j];
     }
     echo "<br>";
     }
@@ -75,11 +75,11 @@ foreach ($SummMatrix as $key => $subarr)
         $SummMatrixTranspon[$subkey][$key] = $subvalue;
     }
 }
-for($c = 0; $ c < $column; $c++)
+for($i = 0; $i < $column; $i++)
 {
-    for($r = 0; $ r < $row; $r++)
+    for($j = 0; $j < $row; $j++)
     {
-       echo $SummMatrixTranspon[$c][$r] . " ";
+       echo $SummMatrixTranspon[$i][$j] . " ";
     }
     echo "<br>";
 }

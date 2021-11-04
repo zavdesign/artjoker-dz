@@ -10,20 +10,17 @@ DZ1-4
  */
 
 
-function ipInRange($ip)
+function ipInRange($ip, $ipStart, $ipEnd)
 {
-    $low_ip =mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255);
-    $high_ip= '121.0.0.0';
-    if ($ip <= $high_ip && $low_ip <= $ip) 
-    {
+
+    if (ip2long($ip)>=ip2long($ipStart) && ip2long($ip)<=ip2long($ipEnd)) {
         echo "in range";
     }
     else 
     {
         echo "not in range";
     }
-    return true;
 }
 
 
-echo ipInRange('45.126.101.65');
+
